@@ -16,7 +16,7 @@ func Cache(name string) *Table {
 	if !ok {
 		t = &Table{
 			items:          make(map[interface{}]*Item),
-			interval:       1 * time.Second,
+			interval:       0 * time.Second,
 			addCallback:    nil,
 			deleteCallback: nil,
 			log:            nil,

@@ -54,6 +54,7 @@ func (t *Table) Get(key interface{}) (interface{}, error) {
 	if !ok {
 		return nil, NotFoundedKey
 	}
+	v.lastTime = time.Now()
 	v.accessCount++
 	return v.data, nil
 }
